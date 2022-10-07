@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Projet Canvas Painting JS</title>
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+
+    <h1>COLOR YOUR LIFE</h1>
+    <main id="opacity">
+        <div id="content">
+
+            <canvas id="canvas-area"></canvas>
+        </div>
+
+        <div class="container">
+            <div id="outils">
+                <div class="outil">
+                    <div class="row>
+                    <span class=" title">Color</span>
+                        <input type="color" id="color" />
+                    </div>
+                    <div class="colors">
+                        <button type="button" class="clrPicker" value="#000000" data-color="#000000"></button>
+                        <button type="button" class="clrPicker" value="#0000ff" data-color="#0000ff"></button>
+
+                        <button type="button" class="clrPicker" value="#00ff00" data-color="#00ff00"></button>
+                        <button type="button" class="clrPicker" value="#f00000" data-color="#f00000"></button>
+                        <button type="button" class="clrPicker" value="#ff6600" data-color="#ff6600"></button>
+                        <button type="button" class="clrPicker" value="#ffcc00" data-color="#ffcc00"></button>
+                    </div>
+                    <div class="outil">
+                        <span class="title">Taille</span>
+                        <input type="number" id="taille" max="100" min="1" value="1" />
+                    </div>
+                    <div class="outil" id="gomme">
+                        <p>Gomme</p>
+                        <i class="las la-eraser"></i>
+                    </div>
+                    <div class="outil">
+                        <span class="title hidden">Efface</span>
+                        <button id="efface">Efface</button>
+                    </div>
+                    <div class="outil">
+                        <span class="title hidden">Enregistre</span>
+                        <button id="enregistre">Enregistre</button>
+                    </div>
+
+                    <div class="outil">
+                        <span class="title hidden">Envoyer la E-carte</span>
+                        <button id="envoyer" class="ecard">Ecard</button>
+                    </div>
+                </div>
+                <!-- <div class="outil">
+                            <input type='file' id='img'>
+                     </div> -->
+            </div>
+        </div>
+    </main>
+
+
+
+    <section>
+
+        <div id="form_contact" class="form_contact cache">
+
+            <form method="POST" action="sendEmail.php" class='email-form' id="contact">
+                <p>
+                    <label for="nom" class="nom">Nom</label>
+                    <br /><input id="nom" name="nom" type="text">
+                    <input type="hidden" id="pic" name="pic">
+                    <button type="submit" class='email-form__close'>X</button>
+                </p>
+                <p>
+                    <label for="from">Votre adresse mail</label>
+                    <input id="from" name="from" type="email" class="email-form__text">
+
+                </p>
+                <p>
+                    <label for="to">Mail du destinataire</label>
+                    <input id="to" name="to" type="email" class="email-form__text">
+
+                </p>
+                <p>
+                    <label for="subject" class="subject">Sujet</label>
+                    <input id="subject" name="subject" type="text" class="email-form__text">
+                </p>
+
+                <p>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="10" cols="80" class="email-form__textarea"></textarea>
+                </p>
+                <label for="xmailcopy">Voulez vous recevoir une copie de ce mail?</label>
+                <input name="xmailcopy" id="xmailcopy" type="checkbox" />
+                <p>
+                    <input type="hidden" id="pic" name="pic">
+                    <button type="submit" class='email-form__submit'>Envoyer</button>
+                    <input class="email-form__reset" type="reset">
+
+                </p>
+
+            </form>
+
+        </div>
+    </section>
+    <!-- <script src="mail.js"></script> -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
